@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Interactive card details form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main class="container">
+    <section class="left-box">
+      <div class="front-card">
+        <img src="images/card-logo.svg" alt="">
+        <h1 class="card-number">0000 0000 0000 0000</h1>
+        <div class="holder">
+          <p class="card-holder">Jane Appleseed</p>
+          <p class="exp.-date"><span class="exp-months">00</span>/<span class="exp-years">00</span></p>
+        </div>
+      </div>
+      <div class="back-card">
+        <p class="cvc-number">000</p>
+      </div>
+    </section>
+    <section class="right-box">
+      <div class="form">
+        <form action="" id="myForm" novalidate>
+          <div class="name">
+            <label for="name">Cardholder Name</label>
+            <input type="text" class="card-holder-name click" placeholder="e.g. Jane Appleseed" >
+            <p class="error-message1">Can't be blank</p>
+          </div>
+          <div class="number">
+            <label for="number">Card Number</label>
+            <input type="text" class="cardNumber2 click" placeholder="e.g. 1234 5678 9123 0000"  maxlength="19" minlength="19">
+            <p class="error-message" id="errorMessage">Wrong format, numbers only</p>
+            <p class="error-message1">Can't be blank</p>
+          </div>
+          <div class="get-date">
+            <div class="date">
+              <label for="date">Exp. Date (MM/YY)</label>
+              <div class="months">
+                <input type="text" class="get-months click" placeholder="MM" maxlength="2">
+                <input type="text" class="get-years click" placeholder="YY" maxlength="4">
+              </div>
+              <p class="error-message1">Can't be blank</p>
+            </div>
+            <div class="cvc">
+              <label for="cvc">CVC</label>
+              <input type="text" class="enter-cvc click" placeholder="e.g. 123" maxlength="3">
+              <p class="error-message1">Can't be blank</p>
+            </div>
+          </div>
+          <button type="submit" class="confirmBtn">Confirm</button>
+        </form>
+      </div>
+      <div class="thanks hidden">
+        <img src="images/icon-complete.svg" alt="">
+        <h2>Thank you!</h2>
+        <p>We've added your card details</p>
+        <button class="continueBtn">Continue</button>
+      </div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+
+</html>
